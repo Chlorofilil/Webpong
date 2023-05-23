@@ -9,12 +9,16 @@ import { MainComponent } from './menu/main/main.component';
 import { TreningComponent } from './menu/trening/trening.component';
 import { appRoutingModule } from './app-routing.module';
 
+//components
+import { TheNavigationComponent } from './components/the-navigation/the-navigation.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    TreningComponent
+    TreningComponent,
+    TheNavigationComponent
   ],
   imports: [
     BrowserModule,
