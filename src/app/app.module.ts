@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';  
+
 import { AppComponent } from './app.component';
 
 //main  vyklikavacie okna
@@ -11,6 +13,8 @@ import { appRoutingModule } from './app-routing.module';
 
 //components
 import { TheNavigationComponent } from './components/the-navigation/the-navigation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -18,12 +22,19 @@ import { TheNavigationComponent } from './components/the-navigation/the-navigati
     AppComponent,
     MainComponent,
     TreningComponent,
-    TheNavigationComponent
+    TheNavigationComponent,
+    
+
+    
   ],
   imports: [
     BrowserModule,
     appRoutingModule,
     RouterModule,
+    FormsModule,  
+    ReactiveFormsModule, BrowserAnimationsModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
