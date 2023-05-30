@@ -1,11 +1,35 @@
-<div>
+<!-- app.component.html -->
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .red-background {
+    background-color: #c530b1;;
+    height: 100%;
+  }
+</style>
 
-    <header>
-        <the-navigation></the-navigation>
-    </header>
-    
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-    
- </div>
+<div class="red-background">
+  <header>
+    <the-navigation></the-navigation>
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+
+
+  <br>
+  <mat-form-field>
+    <mat-label>Typy treningu</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let food of Trainings" [value]="food.value">
+        {{ food.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
